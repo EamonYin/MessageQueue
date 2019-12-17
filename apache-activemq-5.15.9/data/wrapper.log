@@ -3523,3 +3523,4 @@ INFO   | jvm 1    | 2019/12/17 14:11:00 |  INFO | ActiveMQ Jolokia REST API avai
 INFO   | jvm 1    | 2019/12/17 14:11:01 |  INFO | Initializing Spring FrameworkServlet 'dispatcher'
 INFO   | jvm 1    | 2019/12/17 14:11:01 |  INFO | No Spring WebApplicationInitializer types detected on classpath
 INFO   | jvm 1    | 2019/12/17 14:11:01 |  INFO | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml
+INFO   | jvm 1    | 2019/12/17 14:15:51 |  WARN | Transport Connection to: tcp://127.0.0.1:50629 failed: java.net.SocketException: Connection reset

@@ -1637,3 +1637,33 @@ org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 48 i
 	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_181]
 	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)[wrapper.jar:3.2.3]
 	at java.lang.Thread.run(Unknown Source)[:1.8.0_181]
+2019-12-17 14:10:59,296 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@235a12df: startup date [Tue Dec 17 14:10:59 CST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2019-12-17 14:10:59,868 | INFO  | Using Persistence Adapter: JDBCPersistenceAdapter(org.apache.commons.dbcp2.BasicDataSource@ca09b0b) | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2019-12-17 14:11:00,085 | INFO  | Database adapter driver override recognized for : [mysql_connector_java] - adapter: class org.apache.activemq.store.jdbc.adapter.MySqlJDBCAdapter | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | WrapperSimpleAppMain
+2019-12-17 14:11:00,162 | INFO  | Database lock driver override not found for : [mysql_connector_java].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | WrapperSimpleAppMain
+2019-12-17 14:11:00,164 | INFO  | Attempting to acquire the exclusive lock to become the Master broker | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | WrapperSimpleAppMain
+2019-12-17 14:11:00,173 | INFO  | Becoming the master on dataSource: org.apache.commons.dbcp2.BasicDataSource@ca09b0b | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | WrapperSimpleAppMain
+2019-12-17 14:11:00,175 | INFO  | PListStore:[E:\GitHub\messagequeue\apache-activemq-5.15.9\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2019-12-17 14:11:00,287 | WARN  | Broker sequence id wasn't recovered properly, possible duplicates! | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | WrapperSimpleAppMain
+2019-12-17 14:11:00,304 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:LAPTOP-G60O641F-50608-1576563060183-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2019-12-17 14:11:00,368 | INFO  | Listening for connections at: tcp://LAPTOP-G60O641F:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,369 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2019-12-17 14:11:00,372 | INFO  | Listening for connections at: amqp://LAPTOP-G60O641F:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,374 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2019-12-17 14:11:00,377 | INFO  | Listening for connections at: stomp://LAPTOP-G60O641F:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,378 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2019-12-17 14:11:00,382 | INFO  | Listening for connections at: mqtt://LAPTOP-G60O641F:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,383 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2019-12-17 14:11:00,387 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,411 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | WrapperSimpleAppMain
+2019-12-17 14:11:00,452 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@4934bc92{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2019-12-17 14:11:00,486 | INFO  | Listening for connections at ws://LAPTOP-G60O641F:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2019-12-17 14:11:00,487 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2019-12-17 14:11:00,488 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:LAPTOP-G60O641F-50608-1576563060183-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2019-12-17 14:11:00,489 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2019-12-17 14:11:00,827 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2019-12-17 14:11:00,906 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2019-12-17 14:11:00,906 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2019-12-17 14:11:00,951 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2019-12-17 14:11:01,068 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2019-12-17 14:11:01,469 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
