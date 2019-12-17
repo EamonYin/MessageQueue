@@ -28,7 +28,7 @@ public class ActiveMQ {
         //通过session对象创建消息的发送着
         MessageProducer producer = session.createProducer(topic);
         //通过session创建消息对象
-        TextMessage message = session.createTextMessage("小名Test");
+        TextMessage message = session.createTextMessage("小名Test1111");
         //发送消息
         producer.send(message);
         /**
@@ -59,7 +59,12 @@ public class ActiveMQ {
         //连接MQ服务
         connection.start();
         //获取session对象
-        Session session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
+
+        /*自动应答*/
+        //Session session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
+        /*手动应答*/
+        Session session = connection.createSession(false,Session.CLIENT_ACKNOWLEDGE);
+
         //通过session对象创建Topic
         Topic topic = session.createTopic("MQ-Test");
         //通过session对象创建消息的消费者
@@ -71,12 +76,22 @@ public class ActiveMQ {
             public void onMessage(Message message) {
                 TextMessage textMessage = (TextMessage) message;
                 try {
-                    System.out.println("消费者接收到了"+textMessage.getText());
+                    if(textMessage.getText().toString().equals("小名Test")){
+                        System.out.println("消费者接收到了"+textMessage.getText());
+                        message.acknowledge();
+                    }else{
+                        System.out.println("消息处理失败");
+                        //通知MQ进行消息重复，最多可以重复6次
+                        session.recover();
+                        //模拟消息失败
+                        int i= 1/0;
+                    }
                 } catch (JMSException e) {
                     e.printStackTrace();
                 }
             }
         });
+        //保证消费端一直在线
         while(true){}
     }
 
