@@ -28,7 +28,7 @@ public class ActiveMQ {
         //通过session对象创建消息的发送着
         MessageProducer producer = session.createProducer(topic);
         //通过session创建消息对象
-        TextMessage message = session.createTextMessage("小名Test1111");
+        TextMessage message = session.createTextMessage("小名Test");
         //发送消息
         producer.send(message);
         /**
@@ -80,6 +80,10 @@ public class ActiveMQ {
                         System.out.println("消费者接收到了"+textMessage.getText());
                         message.acknowledge();
                     }else{
+                        /**
+                         * 测试 消息处理失败 需要修改为createTextMessage("小名Test1111");
+                         * TextMessage message = session.createTextMessage("小名Test1111");
+                         */
                         System.out.println("消息处理失败");
                         //通知MQ进行消息重复，最多可以重复6次
                         session.recover();
