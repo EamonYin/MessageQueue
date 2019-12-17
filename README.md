@@ -24,3 +24,9 @@
 通过session对象创建消息的消费者  
 指定消息监听器  
 保证消费端一直在线  
+---------------------------------------------------
+通过替换
+GitHub\messagequeue\apache-activemq-5.15.9\conf
+中的 activemq.xml 文件
+可以分别测试
+本地持久化（ActiveMQ类） 和 mysql持久化（TopicPersistentTest类）

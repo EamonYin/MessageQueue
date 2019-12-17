@@ -6,12 +6,17 @@ import org.junit.Test;
 
 import javax.jms.*;
 
+
+
 public class ActiveMQ {
 
     private static final String USERNAME = "admin"; // 默认连接
     private static final String PASSWORD = "admin"; // 默认密码
     private static final String URL = "failover://tcp://localhost:61616";
-
+    /**
+     * 测试该类需要修改 D:\apache-activemq-5.15.9\conf\activemq.xml 中两个配置
+     * 或者替换成 D:\apache-activemq-5.15.9\conf\原始activemq.xml(未加数据库配置)文件中的.xml文件
+     */
     //编写消息的发送方[生产者]
     @Test
     public void test1() throws JMSException {
