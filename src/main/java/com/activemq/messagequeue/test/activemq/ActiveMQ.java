@@ -32,6 +32,7 @@ public class ActiveMQ {
         //发送消息
         producer.send(message);
         /**
+         * 
          * connection.createSession(paramA,paramB);中的paramA为true
          * 1、true：支持事务
          * 为true时：paramB的值忽略， acknowledgment mode被jms服务器设置为SESSION_TRANSACTED 。 　
