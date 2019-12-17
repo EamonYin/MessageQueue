@@ -25,14 +25,14 @@ public class ActiveMQ {
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         //通过session对象创建Topic
         Topic topic = session.createTopic("MQ-Test");
-        //通过session对象创建消息的发送着
+        //通过session对象创建消息的发送者
         MessageProducer producer = session.createProducer(topic);
         //通过session创建消息对象
         TextMessage message = session.createTextMessage("小名Test");
         //发送消息
         producer.send(message);
         /**
-         * 
+         *
          * connection.createSession(paramA,paramB);中的paramA为true
          * 1、true：支持事务
          * 为true时：paramB的值忽略， acknowledgment mode被jms服务器设置为SESSION_TRANSACTED 。 　
